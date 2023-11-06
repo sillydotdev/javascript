@@ -1,8 +1,9 @@
 // Objects in javascript
 // There are two ways to create objects in javascript:
-// 1 - using constructor
+// 1 - using constructor (Singleton)
 // 2 - using literals
 
+// Singleton
 // using constructor
 // Object.create         // will study this later
 
