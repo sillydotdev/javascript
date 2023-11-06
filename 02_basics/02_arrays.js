@@ -37,3 +37,4 @@ let score3 = 300
 const score = Array.of(score1, score2, score3)
 console.log(score);
 
+console.log(score.reverse());
