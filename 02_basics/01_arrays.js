@@ -31,10 +31,16 @@ arr.shift()   // shift() removes the element from the beginning of an array
 //+++++++++++++++++++++++++++++++
 // join()
 const arr1 = [1, 2, 3, 4, 5, 6]
-//const arr2 = arr1.join()     // join() returns an string by concatenating all the elements of an array
+const arr2 = arr1.join()     // join() returns an string by concatenating all the elements of an array
 //const arr2 = arr1.join('')   // separated by comma(,) or a specified separator(separator can be anything like -,_ or any letter) 
-const arr2 = arr1.join('-')
-// console.log(arr2);      
+//const arr2 = arr1.join('-')
+// console.log(arr2);    
+// console.log(typeof arr1);  
+// console.log(typeof arr2);  
+
+// console.log(arr1.includes(5));
+// console.log(arr1.indexOf(3));
+
 
 
 // slice, splice
