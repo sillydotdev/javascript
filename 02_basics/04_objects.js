@@ -25,8 +25,32 @@ const regularUser = {
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "c", 4: "d"}
 // const obj3 = {obj1, obj2}
-// const obj3 = {...obj1, ...obj2}
 // const obj3 = Object.assign(obj1, obj2)
-const obj3 = Object.assign({}, obj1, obj2)
+// const obj3 = Object.assign({}, obj1, obj2)  // Object.assign(target, source)
+const obj3 = {...obj1, ...obj2}   // ... means spread
 
-console.log(obj3);
+// console.log(obj3);
+
+// multiple objects in an array
+const users = [
+    {
+        id: "1",
+        email: "kam@gmail.com"
+    },
+    {
+        id: "2",
+        email: "dan@gmail.com"
+    },
+    {
+        id: "3",
+        email: "sam@gmail.com"
+    }   
+]
+// console.log(users);
+// console.log(users[2].email);
+
+console.log(tinderUser);
+console.log(Object.keys(tinderUser));  //returned in an array
+console.log(Object.values(tinderUser));  //returned in an array
+console.log(Object.entries(tinderUser)); //all entries returned as arrays within a single array
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));  //whether the key is present in onject or not
