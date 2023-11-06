@@ -13,6 +13,7 @@ const all_heros = marvel_heros.concat(dc_heros)  // concat() creates a new array
 // console.log(all_heros);                          // of two arrays
 
 // There is a better way to concat multiple arrays
+// ... is called aspread operator
 const all_new_heros = [...marvel_heros, ...dc_heros]  // The advantage with this way is that you can concatinate
 // console.log(all_new_heros);                           // as many arrays as you want...
 

@@ -27,7 +27,7 @@ const obj2 = {3: "c", 4: "d"}
 // const obj3 = {obj1, obj2}
 // const obj3 = Object.assign(obj1, obj2)
 // const obj3 = Object.assign({}, obj1, obj2)  // Object.assign(target, source)
-const obj3 = {...obj1, ...obj2}   // ... means spread
+const obj3 = {...obj1, ...obj2}   // ... means spread operator
 
 // console.log(obj3);
 
