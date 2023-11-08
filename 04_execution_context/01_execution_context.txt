@@ -1,0 +1,4 @@
+https://www.freecodecamp.org/news/execution-context-how-javascript-works-behind-the-scenes/
+
+Visit this  link to learn "How Javascript works behind the scenes". Learn about execution context.
+and call stack in Javascript. 
