@@ -47,14 +47,14 @@ if(true) {
 // +++++++++++++++++++HOISTING++++++++++++++++++++
 
 console.log(addOne(5));
-function addOne(num) {     // here you can access function anytime, befor and after initialization
+function addOne(num) {     // here you can access function anytime, before and after initialization
     return num + 1
 }
 // console.log(addOne(5));
 
 
 
-// console.log(addTwo(5));          // here you cannot access function before initialiation
+// console.log(addTwo(5));       // here you cannot access function before initialiation
 const addTwo = function(num) {   // We can declare function in this way as well. We can hold it in a variable
     return num + 2               // here it is usually called an Expression
 }

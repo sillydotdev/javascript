@@ -19,7 +19,7 @@ console.log("Cart C: ",calculateCartPrice2(200, 300, 400, 500));
 
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Passing objects to a afunction
+// Passing objects to a a function
 const user = {
     username: "Kamran",
     age: "22"
