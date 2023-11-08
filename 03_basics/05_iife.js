@@ -11,7 +11,7 @@ myDatabase();
 //     console.log(`DATABASE CONNECTION CREATED`);    // You have to wrap the whole function in parenthesis
 // }()
 
-(function myDatabaseConnection() {
+(function myDatabaseConnection() {   //Named IIFE
     console.log(`DATABASE CONNECTION CREATED`);
 })();
 
