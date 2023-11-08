@@ -72,4 +72,3 @@ console.log("Printing object using imlicit return in arrow function:",myObjectFu
 
 
 
-
