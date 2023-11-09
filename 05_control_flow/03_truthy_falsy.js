@@ -37,7 +37,7 @@ const userEmail = "kamran@gmail.com"     // obviously will print if statement
 
 
  // Nullish Coalescing Operator (??): null undefined
-
+ // it is used when youb want to run another function or something if you get null value
  let val;
 //  val = 5 ?? 10
 //  val = null ?? 15
