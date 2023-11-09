@@ -17,7 +17,10 @@ myDatabase();
 
 
 /*
- * Note: IIFE makes the function immediately and prevents the function fron the pollution of global variables etc. Also an important point to note is that you have to use semicolon(;) at the end of IIFE because IIFE does not know when to end the invokation. Otherwise rest of the code will not run and your program will show error...
+ * Note: IIFE makes the function immediately and prevents the function fron the pollution of 
+ * global variables etc. Also an important point to note is that you have to use semicolon(;) 
+ * at the end of IIFE because IIFE does not know when to end the invokation. 
+ * Otherwise rest of the code will not run and your program will show error...
  */
 
 ( (name) => {
