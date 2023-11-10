@@ -23,7 +23,7 @@ const userEmail = "kamran@gmail.com"     // obviously will print if statement
     console.log("Array is empty...");
  }
 
- // best ways to check if array is empty
+ // best ways to check if object is empty
  const myObject = {}
  if(Object.keys(myObject).length === 0) {       // Object.keys() returs an array of keys in an object
     console.log("Object is empty...");
