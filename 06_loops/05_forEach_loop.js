@@ -1,7 +1,7 @@
 // forEach loop 
 
 const languages = ["js", "java", "python", "swift", "rust"]
-languages.forEach( function(lang) {
+languages.forEach( function(lang) {    // in forEach loop we don't give the name of the functiom
     // console.log(lang);
     // console.log(languages.indexOf(lang));
 } )
