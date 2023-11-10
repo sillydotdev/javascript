@@ -27,7 +27,7 @@ for (const keys of map1) {
     console.log(keys);      // will print each key-value pair in separate arrays
 }
 for (const [i,j] of map1) {
-    console.log(i, ':->', j);      // will print each key-value pair in separately
+    console.log(i, ':->', j);      // will print each key-value pair separately without in arrays
 }
 
 
