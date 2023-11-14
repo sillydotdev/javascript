@@ -2,7 +2,7 @@
 
 const languages = ["js", "java", "python", "swift", "rust"]
 languages.forEach( function(lang) {    // in forEach loop we don't give the name of the functiom
-    // console.log(lang);
+    //console.log(lang);
     // console.log(languages.indexOf(lang));
 } )
 
@@ -14,15 +14,15 @@ footballPlayers.forEach( (players) => {    // "players is a variable as a parame
 
 
 // You can declare the function separately as well and use it in forEach loop
-function adition(print) {
+function addition(print) {
     // console.log(print);
 }
-languages.forEach(adition)
+languages.forEach(addition)
 
 
 // multiple parameters in forEach
 languages.forEach( (item, index, arr) => {
-    // console.log(item, index, arr);
+     console.log(item, index, arr);
 })
 
 

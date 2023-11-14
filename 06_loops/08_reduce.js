@@ -1,6 +1,6 @@
 // reduce in javascript
 
-const numbers = [1, 2, 3,4, 5]
+const numbers = [1, 2, 3, 4, 5]
 
 // reduce using normal functions
 // let initialValue = 0;
