@@ -22,3 +22,4 @@ This repository is for learning JavaScript.
 19. for, while & do-while loops
 20. for of, for in, forEach loops
 21. filter, map and reduce
+22. DOM basics. Create, edit and remove elements from DOM
