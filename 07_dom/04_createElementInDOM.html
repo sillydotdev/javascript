@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create elements in JS using DOM</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+</body>
+<script>
+    const div = document.createElement("div")   // creates a div but does not appear on the document yet
+    console.log(div);
+    div.className = "main";           // giving class to div
+    div.id = Math.round(Math.random() * 10 + 1)    // giving ID to div
+    div.setAttribute("title", "myDiv")   // used to create custom attributes
+    div.style.backgroundColor = "brown"
+    div.style.padding = "10px"
+    div.style.borderRadius = "10px"
+    // div.innerText = "No amount of money ever bought a second of time."     // used to create text node in the element
+    const addText = document.createTextNode("No amount of money ever bought a second of time.")   // also used to create text node in the element 
+    div.appendChild(addText)   // adds that text to the element
+
+    document.body.appendChild(div)   // actually displays the element on the document
+    
+    // +++++++++++++++++++++++++++++++++++++++++++
+    // all the above can be done using a function as well as shown below:
+     
+    // function createDiv(addText) {
+    //     const div = document.createElement("div")   // creates a div but does not appear on the document yet
+    //     console.log(div);
+    //     div.className = "main";           // giving class to div
+    //     div.id = Math.round(Math.random() * 10 + 1)    // giving ID to div
+    //     div.setAttribute("title", "myDiv")   // used to create custom attributes
+    //     div.style.backgroundColor = "brown"
+    //     div.style.padding = "10px"
+    //     div.style.borderRadius = "10px"
+    //     // div.innerText = "No amount of money ever bought a second of time."     // used to create text node in the element
+    //     addText = document.createTextNode(addText)   // also used to create text node in the element 
+    //     div.appendChild(addText)   // adds that text to the element
+
+    //     document.body.appendChild(div)
+    // }
+    // createDiv("No amount of money ever bought a second of time.")
+    // createDiv("No amount of ")
+</script>
+
+</html>
