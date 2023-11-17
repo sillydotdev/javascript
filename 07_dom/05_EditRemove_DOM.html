@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and remove elements in DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="languages">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.languages').appendChild(li)
+    }
+    addLanguage("java")
+    addLanguage("python")
+
+    // below is the more optimized approach
+    function addLanguageOptimized(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))    // createTextNode is more optimized way than innerHTML to insert the text into the element
+        document.querySelector('.languages').appendChild(li) // because in innerHTML you have to traverse the whole tree to insert the text
+    }                                                        // but using createTextNode it directly inserts at therequired position
+    addLanguageOptimized("golang")
+    addLanguageOptimized("rust")
+
+    // Edit an element inner text
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "mojo"
+    const newLi = document.createElement('li')
+    newLi.textContent = "swift"
+    secondLang.replaceWith(newLi)
+
+    // another example of edit
+    const thirdLang = document.querySelector("li:nth-child(3)")
+    thirdLang.outerHTML = '<li>Typescript</li>'
+
+    // remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()   // removed rust
+</script>
+</html>
