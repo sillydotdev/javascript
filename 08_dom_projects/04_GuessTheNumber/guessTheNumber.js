@@ -18,20 +18,22 @@ if(playGame) {
     submit.addEventListener('click', function(e){
         e.preventDefault();
         const guess = parseInt(userInput.value);
+        console.log(guess);
         validateGuess(guess);
     });
 }
 
 function validateGuess(guess) {
-    //
     if(isNaN(guess)) {
-        alert("Please enter a number.")
-    }else if(guess < 1 || guess > 100) {
-        alert("Please enter a number between 1 and 100.");
+        alert('Please enter a number.')
+    }else if(guess < 1 ) {
+        alert('Please enter a number between 1 and 100.');
+    }else if(guess > 100) {
+        alert('Please enter the number less tha 100')
     }
     else{
         prevGuess.push(guess);
-        if(numOfGuesses > 10) {
+        if(numOfGuesses === 11) {
             displayGuess(guess);
             displayMessage(`Game over... Random number was: ${randomNumber}`)
             endGame();
@@ -44,17 +46,15 @@ function validateGuess(guess) {
 
 // This function checks whether the guess is equal to random number generated or less or higher than the random number.
 function checkGuess(guess) {
-    if(randomNumber === guess) {
+    if(guess === randomNumber) {
         displayMessage(`Congratulations.... You guessed it right...`);
         endGame();
     }
     else if(guess < randomNumber) {
         displayMessage(`Guess is LOW...`);
-        endGame();
     }
-    else{
+    else if(guess > randomNumber){
         displayMessage(`Number is HIGH...`);
-        endGame();
     }
 }
 
@@ -82,15 +82,16 @@ function endGame() {
 }
 
 function newGame() {
-    const newGameButton = document.querySelector('.newGame');
+    const newGameButton = document.querySelector('#newGame');
     newGameButton.addEventListener('click', function(e) {
         randomNumber = parseInt(Math.random() * 100 + 1);
         prevGuess = [];
         numOfGuesses = 1;
-        remaining.innerHTML = `${11 - numOfGuesses}`;
         guessSlot.innerHTML = '';
+        remaining.innerHTML = `${11 - numOfGuesses}`;
         userInput.removeAttribute('disabled');
         startOver.removeChild(p);
+
         playGame = true;
     });
 }
