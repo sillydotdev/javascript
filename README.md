@@ -23,3 +23,9 @@ This repository is for learning JavaScript.
 20. for of, for in, forEach loops
 21. filter, map and reduce
 22. DOM basics. Create, edit and remove elements from DOM
+23. 4 projects using DOM:
+        1. Color Changer
+        2. BMI Calculator
+        3. Digital Clock
+        4. Number Guessing Game
+24. Events
