@@ -1,21 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>htnml Events </title>
 </head>
+
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
-    <div >
+    <div>
         <ul id="images">
-            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/56759/pexels-photo-56759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="photoshop"></li>
-            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
-            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="photoshop"
+                    src="https://media.istockphoto.com/id/1338694612/photo/modern-black-silver-pc-monitor-with-mouse-and-keyboard-colorful-rainbow-holi-powder-cloud.webp?b=1&s=170667a&w=0&k=20&c=e-5eXmV8ldRf3HbanaX6t64mlI9JLJ7ToR2D0lo6ybs="
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://media.istockphoto.com/id/1192780580/photo/fuji-mountain-red-maple-tree-and-fisherman-boat-with-morning-mist-in-autumn-kawaguchiko-lake.webp?b=1&s=170667a&w=0&k=20&c=X2o6-J7DcJ4ASFWWJxyWw_rZLHZ6iwCun9IKBh42C78="
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://media.istockphoto.com/id/1371257026/photo/huge-smooth-boulders-honed-by-ancient-glaciers-and-flows-of-the-ammonoosuk-mountain-river.webp?b=1&s=170667a&w=0&k=20&c=DGr2gzs1vd0opnQr8jGpPFvx92oVP41nH0qKKwN7aDA="
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://media.istockphoto.com/id/1323187200/photo/spotted-owlet.webp?b=1&s=170667a&w=0&k=20&c=UXUtHGWYz1qyNaSMZSKccRV2fW3jnFI1DViXFGVz0eE="
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://media.istockphoto.com/id/1011940756/photo/muslim-men-praying-during-ramadan.webp?b=1&s=170667a&w=0&k=20&c=V-h0jMkaubPbaqY73P5IP9TVoRh_EMGvoK3qKPZZiUo="
+                    alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
         </ul>
-   </div>
+    </div>
 </body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked')
+    // }
+
+    // attachEvent() - was used in InternetExplorer era
+    // jQuery - on  -  These were used instead of addEventListener()
+
+    // study the following: 
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('owl').addEventListener('click', function(e) {   // there is a 3rd parameter for addEventListener('click', function(){}, false) - false is its default value so we don't write it. But there are some websites which dont work without writing true or false.
+    //     // alert('owl clicked yet again');
+    //     console.log(e);
+    // }, false)
+
+
+    // event propogation
+    // it has two contexts:
+    // 1. event bubbling
+    // 2. event capturing
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log("clicked inside the ul...")
+    // }, false);   // when both the events are kept to false, event bubbling happens...
+    // document.getElementById('owl').addEventListener('click', function(e) {
+    //     console.log("owl clicked...")
+    //     e.stopPropagation();  // thias is used to stop propogation. When u click on owl, only owl will be executed, it will not bubble up
+    // }, false);  // event bubbling will happen. When you click on owl, first owl event(child) will be executed, them the images event which is a parent of owl
+    // however if you keep both the events true, the event capturing will happen which means parent will be executed first followed by child
+    // default is "false" which means it is in bubbling format
+
+
+    // preventDefault()
+    // document.getElementById('google').addEventListener('click', function(e) {
+    //     e.preventDefault();
+    //     console.log("google.com clicked...");
+    //     e.stopPropagation();
+    // }, false)
+
+
+    // Basic project of removing images when clicked on.
+    document.querySelector("#images").addEventListener('click', function (e) {
+        // console.log(e.target.parentNode);  // targets the parent node
+        console.log(e.target.tagName);   // targets the actual tag name
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            // removeIt.parentNode.removeChild(removeIt);
+        }
+
+    })
+</script>
+
 </html>
