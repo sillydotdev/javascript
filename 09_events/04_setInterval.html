@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say my name</title>
+</head>
+
+<body>
+    <h1>My name is Kamran</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    const saySomething = function (str) {
+        console.log(str, Date.now().toLocaleString());
+    }
+    // const stopInterval = setInterval(saySomething, 1000, "Hi Kamran")
+    // clearInterval(stopInterval)
+
+    let startInterval;
+    document.querySelector('#start').addEventListener('click', function () {
+        startInterval = setInterval(saySomething, 1000, "Hi Kamran: ")
+    })
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(startInterval)
+    })
+
+</script>
+
+</html>
