@@ -1,4 +1,5 @@
-// function random(number) {
+// generating random color (rgb)
+// function random(number) {               
 //     return Math.floor(Math.random() * (number + 1));
 // }
 
@@ -7,6 +8,7 @@
 //     document.body.style.backgroundColor = colorChanger;
 // }
 
+// generating random color (hex)
 const randomColor = function(){
     const hex = '0123456789ABCDEF';
     let color = "#"
@@ -15,7 +17,6 @@ const randomColor = function(){
     }
     return color;
 };
-
 
 function myBody() {
     // const colorChanger = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
