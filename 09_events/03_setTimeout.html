@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say my name</title>
+</head>
+<body>
+    <h1>My name is Malik Kamran Mushtaq...</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function() {     // function within the setTimeout()
+    //     console.log("Danish");
+    // },2000)
+
+    const sayMyName = function() {   // separate function 
+        console.log("Danish");
+    }
+
+    const changeHeading = function() {
+        document.querySelector('h1').innerHTML = "Learning JavaScript"
+    }
+
+    // setTimeout(sayMyName, 3000)  // we pass the reference of the function, do not execute the function here
+    const stopSetTimeout = setTimeout(changeHeading, 3000);
+
+
+    // clearTimeout()
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(stopSetTimeout);
+        console.log("STOPPED...");
+    })
+</script>
+</html>
