@@ -116,3 +116,11 @@ fetch('https://jsonplaceholder.typicode.com/users').then((response) => {
 }).catch((error) => console.log("E: ", error))
 
 
+// Promise.all() method
+// Promise.all([promiseOne, promiseThree, promiseFour]).then((data) => {
+//     console.log(data);
+// }).catch((error) => {
+//     console.log("something is fishyy....");
+// })
+
+
