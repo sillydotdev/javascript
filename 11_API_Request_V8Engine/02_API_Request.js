@@ -1,19 +1,3 @@
-const dive = document.createElement("div")
-function myDetails() {
-    dive.innerHTML = `
-        <img src="img_avatar.png" alt="Avatar" style="width:100%">
-        <div class="container">
-            <h4><b>John Doe</b></h4>
-            <p>Architect & Engineer</p>
-        </div>
-`;
-}
-const button = document.querySelector('#btn')
-button.addEventListener('click', function () {
-    myDetails();
-})
-
-
 const requestURL = "https://api.github.com/users/malik-kamran-mushtaq";
 const xhr = new XMLHttpRequest();    // create an XMLHttpRequest
 // xhr.open('GET', "https://api.github.com/users/malik-kamran-mushtaq")
@@ -27,6 +11,11 @@ xhr.onreadystatechange = function () {
         console.log(data);
         console.log(data.public_repos);
         console.log(data.avatar_url);
+
+        document.getElementById('btn').addEventListener('click', function(){
+            document.getElementById('avatar').src = data.avatar_url;
+            document.getElementById('repos').innerHTML = `Public repos: ${data.public_repos}`;
+        })
     }
 }
 xhr.send();
