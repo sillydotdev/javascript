@@ -29,3 +29,7 @@ This repository is for learning JavaScript.
         3. Digital Clock
         4. Number Guessing Game
 24. Events
+25. Async JavaScript: setTimeout(), setInterval()
+        1. Unlimited Background-color Changer project 
+        2. KeyPress Project
+26. API Request and V8 Engine
