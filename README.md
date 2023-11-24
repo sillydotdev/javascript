@@ -33,3 +33,4 @@ This repository is for learning JavaScript.
         1. Unlimited Background-color Changer project 
         2. KeyPress Project
 26. API Request and V8 Engine
+27. Promises and fetch()
