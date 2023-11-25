@@ -19,4 +19,10 @@ function user(username, loginCount, isLoggedIn) {
   *  3. this keyword injects the variables, arguments
   *  4. you get these arguments
   */
+
+
+ console.log(userOne.constructor);
+
+ console.log(userOne instanceof user);  // whether userOne is instance of user or not -- true or false.
+
  
