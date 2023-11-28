@@ -1,5 +1,5 @@
 # javascript
-This repository is for learning JavaScript.
+## This repository is for learning JavaScript.
 
 1. Variables
 2. Datatypes
@@ -34,3 +34,16 @@ This repository is for learning JavaScript.
         2. KeyPress Project
 26. API Request and V8 Engine
 27. Promises and fetch()
+28. Object Oriented Programming in JavaScript
+        1. Object
+        2. costructor
+        3. Class
+        4. Prototypal Inheritance
+        5. call
+        6. static
+        7. bind
+        8. Math.PI
+29. getters and setters (using classes, defineProperty, object-based)
+30. Lexical Scoping
+31. Closures
+
