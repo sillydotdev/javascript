@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical scope in javascript</title>
+</head>
+<body style="background-color: #414141;">
+    
+</body>
+<script>
+    // function outer() {
+    //     let username = "Mozilla";
+    //     function inner() {
+    //         console.log(username)
+    //     }
+    //     inner()
+    // }
+    // outer()
+
+    // function user() {
+    //     let name = "Kamran"
+    //     // console.log(email);
+
+    //     function userOne() {
+    //         let email = "kamran@google.com"
+    //         console.log("Inner function 1: ", name);    // can access the properties of parent function
+    //     }
+    //     // console.log(email);
+
+    //     function userTwo() {
+    //         let course = "CSE";
+    //         console.log("Inner function 2: ", name);        // can access the properties of parent function
+    //         // console.log("Inner function 2: ", email);    // can't access the properties of other inner function
+    //     }
+    //     userOne();
+    //     userTwo();
+    //     // console.log(userTwo.course);
+    // }
+    // user()
+    // console.log("Outside the scope: ",email)     // out of scope. Can't access the properties
+
+    /**
+     * The crux of this is that the inner functions can access the properties of the parent function, 
+     * whilst the parent function annot acecc the properties of the child function.
+     * Also the inner or child functions can't access the properties of each other.
+     * This is called LEXICAL SCOPE...
+    */
+
+
+    //++++++++++++++++++++++++++//
+    //++++CLOSURE+++++++++++++++//
+    function outer() {
+        const name = "Kamran";
+        function inner() {
+            const email = "kamran@gmail.com"
+            console.log("Display name: ", name);
+        }
+        return inner;          // this will return the whole LEXICAL scope of the function... Remember the whole lexical scope
+    }
+    const myOuter = outer();
+    myOuter();
+
+</script>
+</html>
